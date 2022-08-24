@@ -1,0 +1,21 @@
+{
+    "sucess":{
+        "fullName":"Afonso Lira",
+        "cpf":"11122233344",
+        "email":"example@mail.com",
+        "whatsapp":"12312312322",
+        "cep":"123",
+        "numberAddress":"90",
+        "complementAddress":"casa"
+    },
+
+    "formatError":{
+        "fullName":"Afonso Lira",
+        "cpf":"erro proposital",
+        "email":"example@c.c",
+        "whatsapp":"12312312322",
+        "cep":"123",
+        "numberAddress":"90",
+        "complementAddress":"casa"
+    }
+}

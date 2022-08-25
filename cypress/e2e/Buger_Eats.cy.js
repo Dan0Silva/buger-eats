@@ -80,7 +80,7 @@ describe('Buger Eats - Cadastro', () => {
         cy.staysOnTheSamePage()
     });
 
-    it.only('Cadastro com falta de formatação adequada (erro)', () => {
+    it('Cadastro com falta de formatação adequada (erro)', () => {
         cy.clickInTheRegisterButton()
         cy.fillingOutForm(formatError, 1, pathFile)
 
@@ -88,7 +88,25 @@ describe('Buger Eats - Cadastro', () => {
 
         // verificar mensagem de erro nos campos sem formatação adequada
         cy.contains('Oops! CPF inválido').should('be.visible')
-        // falta email
+        cy.get('[name="email"]').should('have.prop', 'type').then((value)=> {
+            expect(value).to.eq('email')
+        })
+
+        // verificar se continua na mesma página
+        cy.staysOnTheSamePage()
+    });
+
+    it('Cadastro com envio de arquivo no formato inadequado (erro)', () => {
+        const pathFileWrong = '../fixtures/files_example/test.html'
+
+        cy.clickInTheRegisterButton()
+
+        // enviar um html para o campo
+        cy.fillingOutForm(sucess, 1, pathFileWrong)
+        
+        // verificar se o campo de arquivo está vazio 
+        // (que não aceitou o arquivo html)
+        cy.get('[type="file"]').should('be.empty')
 
         // verificar se continua na mesma página
         cy.staysOnTheSamePage()

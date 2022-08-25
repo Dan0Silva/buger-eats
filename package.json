@@ -1,16 +1,23 @@
 {
-  "name": "buger-eats_automated-test",
+  "name": "buger-eats",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dan-Sillva/buger-eats.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dan-Sillva/buger-eats/issues"
+  },
+  "homepage": "https://github.com/Dan-Sillva/buger-eats#readme",
   "devDependencies": {
-    "@types/cypress": "^1.1.3",
     "cypress": "^10.6.0",
     "cypress-file-upload": "^5.0.8"
   }

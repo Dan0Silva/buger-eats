@@ -11,7 +11,9 @@ jobs:
       - name: SonarClound scan
         uses: sonarsource/sonarcloud-github-action@master
         with:
-          args: -X
+          args: -X >
+            -Dsonar.organization=dan-sillva
+            -Dsonar.projectKey=Dan-Sillva_buger-eats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

@@ -3,6 +3,7 @@
 const {sucess, formatError} = require('../fixtures/register.json')
 const {message} = require('../fixtures/successMessage.json')
 
+
 const pathFile = '../fixtures/files_example/cap.png'
 
 describe('Buger Eats - Cadastro', () => {

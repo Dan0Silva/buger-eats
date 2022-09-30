@@ -12,6 +12,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4 # use the explicit version number
         timeout-minutes: 4
-        with:
-          # build: npm run build
-          start: npm start
+        # with:
+        #   build: npm run build
+        #   start: npm start

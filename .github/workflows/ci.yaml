@@ -1,5 +1,5 @@
 name: Integration on sonarqube
-on: [push]
+on: [pull_request]
 
 jobs: 
   test:
